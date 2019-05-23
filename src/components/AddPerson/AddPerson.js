@@ -13,19 +13,19 @@ class AddPerson extends Component {
     }
 
     ageChangedHandler = (event) => {
-        this.setState({age: event.target.value});
+        this.setState({age: String(event.target.value)});
     }
 
     render () {
         return (
             <div className="AddPerson">
-                <input 
-                    type="text" 
-                    placeholder="Name" 
+                <input
+                    type="text"
+                    placeholder="Name"
                     onChange={this.nameChangedHandler}
                     value={this.state.name} />
-                <input 
-                    type="number" 
+                <input
+                    type="number"
                     placeholder="Age"
                     onChange={this.ageChangedHandler}
                     value={this.state.age} />
